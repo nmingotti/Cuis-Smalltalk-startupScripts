@@ -62,6 +62,9 @@ cuisConfig = %q@
  "-] Install newest updates still not in the image, in: CoreUpdates "
  ChangeSet installNewUpdates.
 
+ "-] Corrct wheel mouse scrolling bug related to the VM. " 
+ Smalltalk sendMouseWheelEvents: false.
+
  "-] Install fature "
  Feature require: 'WebClient'.    
  Feature require: 'JSON'. 
@@ -79,9 +82,10 @@ cuisConfig = %q@
   Utilities setAuthorName: 'Nicola Mingotti' initials: 'NM'. 
  
   ". When I quit I don't want to be asked to save the image. "
-  " Preferences disable: #askForSaveOnQuit.     "
+  Preferences disable: #checkLostChangesOnStartUp. 
+  Preferences disable: #askConfirmationOnQuit. 
 
-  " . ----- my ChangeSets -------------- "
+  " . ----- my ChangeSets, if necessary -------------- "
   ". when i quit i don't want to be asked to save packages . " 
   " fileoutDir _(DirectoryEntry smalltalkImageDirectory parent asString, '/fileout-to-keep') asDirectoryEntry . "
   " ChangeSet install: (fileoutDir fileMatching: '*NicolaMingotti-2021Aug15-12h20m*.cs.st' ). "
