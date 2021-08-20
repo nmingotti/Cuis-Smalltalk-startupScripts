@@ -3,16 +3,12 @@
 require 'fileutils' 
 
 =begin
-. Si deve lanciare Cuis ma si vuole che:
-1. il file di changes sia sempre lo stesso che gira, quello che e' arrivato
-   durante l'installazione di Cuis.
 
-2. Quindi
+-] TODO. I don't want too many log files
+-] TODO. I don't want too many changes files
 
 =end 
 
-# Tova ll file con nome piu' corto che inizia con Cuis e finisce con '.image'
-# quella e' l'immagine a 64 bit. 
 
 # . Find Cuis base name image 
 Dir.chdir 'Cuis-Smalltalk-Dev'
