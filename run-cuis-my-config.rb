@@ -59,7 +59,8 @@ cuisConfig = %q@
  ChangeSet installNewUpdates.
 
  "-] Corrct wheel mouse scrolling bug related to the VM. " 
- Smalltalk sendMouseWheelEvents: false.
+ "   not necessary if using VM release: 202003021730 "
+ " Smalltalk sendMouseWheelEvents: false. "
 
  "-] Install fature "
  Feature require: 'WebClient'.    
