@@ -50,7 +50,7 @@ cuisConfig = %q@
  list do: [ :x | x delete ] .
 
  "-] font size i like" 
- Preferences veryBigFonts .
+ Preferences standardFonts .
 
  "-] open a Workspace "
  Workspace openWorkspace. 

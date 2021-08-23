@@ -31,8 +31,8 @@ end
 
 # . run cuis 
 Dir.chdir '../'
-puts "Running Cuis base config + veryBigFonts ... "
-system("./sqcogspur64linuxht/squeak", "Cuis-Smalltalk-Dev/#{cuisImage64bit}", "-d", "Preferences veryBigFonts." )
+puts "Running Cuis base config + standardFonts ... "
+system("./sqcogspur64linuxht/squeak", "Cuis-Smalltalk-Dev/#{cuisImage64bit}", "-d", "Preferences standardFonts." )
 
 
 
