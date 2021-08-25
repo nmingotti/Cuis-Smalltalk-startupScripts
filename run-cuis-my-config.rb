@@ -45,6 +45,7 @@ cuisConfig = %q@
  "
  self runningWorld doOneCycle.
 
+
  "-] get rid of all the morph except taskbar "
  list _ UISupervisor ui submorphs reject: [ :aMo | aMo is: #TaskbarMorph ].
  list do: [ :x | x delete ] .
@@ -89,6 +90,9 @@ cuisConfig = %q@
 
  "-] At the end do a Restore Display to redraw the World. " 
  UISupervisor ui restoreDisplay .
+
+ " -] Set default directory di #image directory. " 
+ " Preferences initialFileListDirectories: #image. "
 
 ] value.
 
