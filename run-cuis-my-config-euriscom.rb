@@ -82,6 +82,9 @@ cuisConfig = %q@
   Preferences disable: #checkLostChangesOnStartUp. 
   Preferences disable: #askConfirmationOnQuit. 
 
+  ". I want to hide by default the taskbar "
+  self runningWorld hideTaskbar.
+
   " . ----- my ChangeSets, if necessary -------------- "
   ". when i quit i don't want to be asked to save packages . " 
   " fileoutDir _(DirectoryEntry smalltalkImageDirectory parent asString, '/fileout-to-keep') asDirectoryEntry . "
