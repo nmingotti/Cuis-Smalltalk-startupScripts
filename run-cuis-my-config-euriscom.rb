@@ -34,11 +34,11 @@ end
 # ==================================================
 # . cuis config string. To avoid making another file 
 #   this is Smalltalk code. 
-cuisConfig = %q@
+cuisConfig = %q&
 
 " . The block+value is for making a local variables context "
  
-[ |list tbar area morph vmDir pathStr1 file1 fileoutDir| 
+[ |list tbar area morph vmDir pathStr1 file1 fileoutDir ws1 br1 br2 br3 tr1| 
 
  "-] suggested by Hilaire on the mailing list. 
      without this the existing morph on boot do not get cancelled.
@@ -52,8 +52,9 @@ cuisConfig = %q@
  "-] font size i like" 
  Preferences standardFonts .
 
+
  "-] open a Workspace "
- Workspace openWorkspace. 
+ (Workspace openWorkspace) morphPosition: 57@336 extent: 994@339. 
 
  "-] Install newest updates still not in the image, in: CoreUpdates "
  ChangeSet installNewUpdates.
@@ -93,9 +94,24 @@ cuisConfig = %q@
  "-] At the end do a Restore Display to redraw the World. " 
  UISupervisor ui restoreDisplay .
 
+ "-] full screen on"
+ Display fullScreenMode: true.
+
+ "-] open 3 Browsers "
+ br1 _ BrowserWindow openBrowser.
+ br1 morphPosition: 1295@28 extent: 1196@920 .
+ br1 model alphabetizeSystemCategories.
+ 
+ (BrowserWindow openBrowser) morphPosition: 1309@551 extent: 1196@920. 
+ (BrowserWindow openBrowser) morphPosition: 57@747 extent: 1188@733. 
+
+ "-] open 1 Transcript " 
+ (TranscriptWindow openTranscript) morphPosition: 328@41 extent: 882@279. 
+
+
 ] value.
 
-@
+&
 
 # ==================================================
 # ==================================================
